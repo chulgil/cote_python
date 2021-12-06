@@ -12,10 +12,8 @@
 import re
 import collections
 from typing import Deque
-from Utils.timeit import elapsed
+from utils.timeit import elapsed
 
-
-@elapsed
 def del_special(word: str) -> bool:
     """한글, 영어, 숫자를 제외한 특수문제 삭제
     Args:
@@ -27,7 +25,7 @@ def del_special(word: str) -> bool:
     word = re.sub('[^ a-z0-9ㄱ-ㅣ가-힣+]', '', word)
     return word
 
-
+@elapsed
 def is_palindrome_list(word: str) -> bool:
     """리스트를 활용한 팰린드롬 판별
     Args:
@@ -44,7 +42,7 @@ def is_palindrome_list(word: str) -> bool:
                 return False
         return True
 
-
+@elapsed
 def is_palindrome_deque(word: str)  -> bool:
     """데크를 활용한 팰린드롬 판별
     Args:
@@ -61,6 +59,7 @@ def is_palindrome_deque(word: str)  -> bool:
             return False
         return True
 
+@elapsed
 def is_palindrome_slicing(word:str) -> bool:
     """슬라이싱을 활용한 팰린드롬 판별
     Args:
