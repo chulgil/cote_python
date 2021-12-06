@@ -7,7 +7,7 @@
 
 - 입력 "소주 한 병 만 주소"
 - 출력 false
-
+https://leetcode.com/problems/valid-palindrome/
 """
 import re
 import collections
